@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "hedrasmod",
+	"version": "${version}",
+	"name": "HedrasMod",
+	"description": "Mod create by Mucral for Twitch live 'Hardcore Worldborder'",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/hedrasmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.hedras.HedrasMod"
+		],
+		"fabric-datagen": [
+			"net.hedras.HedrasModDataGenerator"
+		],
+		"client": [
+			"net.hedras.HedrasModClient"
+		]
+	},
+	"mixins": [
+		"hedrasmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.7",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
