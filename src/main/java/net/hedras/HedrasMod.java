@@ -2,6 +2,7 @@ package net.hedras;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.hedras.block.ModBlocks;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,5 +12,6 @@ public class HedrasMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModBlocks.registerModBlocks();
 	}
 }
