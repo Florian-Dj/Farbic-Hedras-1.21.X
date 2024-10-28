@@ -1,3 +1,13 @@
 {
-  "block.hedrasmod.pink_garnet_block": "Block of Pink Garmet"
+  "block.hedrasmod.pink_garnet_block": "Block of Pink Garmet",
+
+  "block.hedrasmod.pink_garnet_stairs": "Pink Garmet Stairs",
+  "block.hedrasmod.pink_garnet_slab": "Pink Garmet Slab",
+  "block.hedrasmod.pink_garnet_button": "Pink Garmet Button",
+  "block.hedrasmod.pink_garnet_pressure_plate": "Pink Garmet Plate",
+  "block.hedrasmod.pink_garnet_fence": "Pink Garmet Fence",
+  "block.hedrasmod.pink_garnet_fence_gate": "Pink Garmet Gate",
+  "block.hedrasmod.pink_garnet_wall": "Pink Garmet Wall",
+  "block.hedrasmod.pink_garnet_door": "Pink Garmet Door",
+  "block.hedrasmod.pink_garnet_pressure_trapdoor": "Pink Garmet Trapdoor"
 }
