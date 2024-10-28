@@ -13,10 +13,6 @@ import net.minecraft.util.Identifier;
 
 public class ModBlocks {
 
-    public static final Block PINK_GARNET_BLOCK = registerBlock("pink_garnet_block",
-            new Block(AbstractBlock.Settings.create().strength(4f)
-                    .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
-
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(HedrasMod.MOD_ID, name), block);
@@ -27,45 +23,35 @@ public class ModBlocks {
                 new BlockItem(block, new Item.Settings()));
     }
 
+    public static final Block WHITE_WOOL_STAIRS = registerBlock("white_wool_stairs",
+            new StairsBlock(Blocks.WHITE_WOOL.getDefaultState(),
+                    AbstractBlock.Settings.create().strength(2f).sounds(BlockSoundGroup.WOOL)));
+    public static final Block WHITE_WOOL_SLAB = registerBlock("white_wool_slab",
+            new SlabBlock(AbstractBlock.Settings.create().strength(2f).sounds(BlockSoundGroup.WOOL)));
+
+    /*
+    public static final Block WHITE_WOOL_BUTTON = registerBlock("white_wool_button",
+            new ButtonBlock(BlockSetType.WARPED,2, AbstractBlock.Settings.create().strength(2f).noCollision()));
+    public static final Block WHITE_WOOL_PRESSURE_PLATE = registerBlock("white_wool_pressure_plate",
+            new PressurePlateBlock(BlockSetType.BAMBOO, AbstractBlock.Settings.create().strength(2f)));
+    */
+
+    public static final Block WHITE_WOOL_FENCE = registerBlock("white_wool_fence",
+            new FenceBlock(AbstractBlock.Settings.create().strength(2f).sounds(BlockSoundGroup.WOOL)));
+    public static final Block WHITE_WOOL_FENCE_GATE = registerBlock("white_wool_fence_gate",
+            new FenceGateBlock(WoodType.SPRUCE, AbstractBlock.Settings.create().strength(2f)));
+    public static final Block WHITE_WOOL_WALL = registerBlock("white_wool_wall",
+            new WallBlock(AbstractBlock.Settings.create().strength(2f).sounds(BlockSoundGroup.WOOL)));
+
     public static void registerModBlocks() {
         HedrasMod.LOGGER.info("Registering Mod Blocks for" + HedrasMod.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
-            entries.add(ModBlocks.PINK_GARNET_BLOCK);
-
-            entries.add(ModBlocks.PINK_GARNET_STAIRS);
-            entries.add(ModBlocks.PINK_GARNET_SLAB);
-            entries.add(ModBlocks.PINK_GARNET_BUTTON);
-            entries.add(ModBlocks.PINK_GARNET_PRESSURE_PLATE);
-            entries.add(ModBlocks.PINK_GARNET_FENCE);
-            entries.add(ModBlocks.PINK_GARNET_FENCE_GATE);
-            entries.add(ModBlocks.PINK_GARNET_WALL);
-            entries.add(ModBlocks.PINK_GARNET_DOOR);
-            entries.add(ModBlocks.PINK_GARNET_TRAPDOOR);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(entries -> {
+            entries.add(ModBlocks.WHITE_WOOL_STAIRS);
+            entries.add(ModBlocks.WHITE_WOOL_SLAB);
+            entries.add(ModBlocks.WHITE_WOOL_FENCE);
+            entries.add(ModBlocks.WHITE_WOOL_FENCE_GATE);
+            entries.add(ModBlocks.WHITE_WOOL_WALL);
         });
     }
-
-    public static final Block PINK_GARNET_STAIRS = registerBlock("pink_garnet_stairs",
-            new StairsBlock(ModBlocks.PINK_GARNET_BLOCK.getDefaultState(),
-                    AbstractBlock.Settings.create().strength(2f).requiresTool()));
-    public static final Block PINK_GARNET_SLAB = registerBlock("pink_garnet_slab",
-            new SlabBlock(AbstractBlock.Settings.create().strength(2f).requiresTool()));
-
-    public static final Block PINK_GARNET_BUTTON = registerBlock("pink_garnet_button",
-            new ButtonBlock(BlockSetType.IRON,2, AbstractBlock.Settings.create().strength(2f).requiresTool().noCollision()));
-    public static final Block PINK_GARNET_PRESSURE_PLATE = registerBlock("pink_garnet_pressure_plate",
-            new PressurePlateBlock(BlockSetType.IRON, AbstractBlock.Settings.create().strength(2f).requiresTool()));
-
-    public static final Block PINK_GARNET_FENCE = registerBlock("pink_garnet_fence",
-            new FenceBlock(AbstractBlock.Settings.create().strength(2f).requiresTool()));
-    public static final Block PINK_GARNET_FENCE_GATE = registerBlock("pink_garnet_fence_gate",
-            new FenceGateBlock(WoodType.ACACIA, AbstractBlock.Settings.create().strength(2f).requiresTool()));
-    public static final Block PINK_GARNET_WALL = registerBlock("pink_garnet_wall",
-            new WallBlock(AbstractBlock.Settings.create().strength(2f).requiresTool()));
-
-    public static final Block PINK_GARNET_DOOR = registerBlock("pink_garnet_door",
-            new DoorBlock(BlockSetType.IRON, AbstractBlock.Settings.create().strength(2f).requiresTool().nonOpaque()));
-    public static final Block PINK_GARNET_TRAPDOOR = registerBlock("pink_garnet_pressure_trapdoor",
-            new TrapdoorBlock(BlockSetType.IRON, AbstractBlock.Settings.create().strength(2f).requiresTool().nonOpaque()));
-
 }

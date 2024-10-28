@@ -1,13 +1,11 @@
 {
-  "block.hedrasmod.pink_garnet_block": "Block of Pink Garmet",
-
-  "block.hedrasmod.pink_garnet_stairs": "Pink Garmet Stairs",
-  "block.hedrasmod.pink_garnet_slab": "Pink Garmet Slab",
-  "block.hedrasmod.pink_garnet_button": "Pink Garmet Button",
-  "block.hedrasmod.pink_garnet_pressure_plate": "Pink Garmet Plate",
-  "block.hedrasmod.pink_garnet_fence": "Pink Garmet Fence",
-  "block.hedrasmod.pink_garnet_fence_gate": "Pink Garmet Gate",
-  "block.hedrasmod.pink_garnet_wall": "Pink Garmet Wall",
-  "block.hedrasmod.pink_garnet_door": "Pink Garmet Door",
-  "block.hedrasmod.pink_garnet_pressure_trapdoor": "Pink Garmet Trapdoor"
+  "block.hedrasmod.white_wool_stairs": "White Wool Stairs",
+  "block.hedrasmod.white_wool_slab": "White Wool Slab",
+  "block.hedrasmod.white_wool_button": "White Wool Button",
+  "block.hedrasmod.white_wool_pressure_plate": "White Wool Plate",
+  "block.hedrasmod.white_wool_fence": "White Wool Fence",
+  "block.hedrasmod.white_wool_fence_gate": "White Wool Gate",
+  "block.hedrasmod.white_wool_wall": "White Wool Wall",
+  "block.hedrasmod.white_wool_door": "White Wool Door",
+  "block.hedrasmod.white_wool_pressure_trapdoor": "White Wool Trapdoor"
 }
